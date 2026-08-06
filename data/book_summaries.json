@@ -1,0 +1,86 @@
+[
+	{
+		"title": "1984",
+		"author": "George Orwell",
+		"themes": ["totalitarism", "supraveghere", "adevăr", "libertate"],
+		"short_summary": "Un roman distopic despre o societate controlată complet de stat, unde gândirea liberă devine o crimă.",
+		"full_summary": "Romanul îl urmărește pe Winston Smith, un funcționar din Oceania, un stat totalitar condus de Partid și de figura omniprezentă a Fratelui cel Mare. Winston trăiește într-o lume în care trecutul este rescris constant, limbajul este manipulat pentru a limita gândirea, iar oamenii sunt supravegheați permanent. Pe măsură ce începe să pună la îndoială propaganda oficială și caută o formă de adevăr personal, el intră într-un conflict direct cu sistemul. Povestea explorează distrugerea individualității, fragilitatea memoriei și felul în care puterea absolută poate remodela realitatea însăși."
+	},
+	{
+		"title": "The Hobbit",
+		"author": "J.R.R. Tolkien",
+		"themes": ["aventură", "curaj", "prietenie", "maturizare"],
+		"short_summary": "Bilbo Baggins pornește într-o aventură neașteptată care îl transformă dintr-un hobbit comod într-un erou ingenios.",
+		"full_summary": "Bilbo Baggins, un hobbit liniștit și atașat de confortul casei sale, este convins de vrăjitorul Gandalf să se alăture unei companii de pitici conduse de Thorin. Scopul lor este să recupereze comoara și regatul pierdut, păzit de dragonul Smaug. În timpul călătoriei, Bilbo trece prin păduri periculoase, munți, peșteri și confruntări cu creaturi ostile. El descoperă resurse interioare nebănuite, inclusiv inteligență, curaj și capacitatea de a lua decizii decisive. Romanul este o poveste clasică de aventură și maturizare, în care eroul aparent modest devine esențial pentru succesul grupului."
+	},
+	{
+		"title": "Dune",
+		"author": "Frank Herbert",
+		"themes": ["putere", "ecologie", "religie", "destin"],
+		"short_summary": "Pe planeta Arrakis, Paul Atreides este prins într-o luptă politică și spirituală care îi va schimba destinul și universul.",
+		"full_summary": "Acțiunea se desfășoară pe Arrakis, singura planetă unde se găsește melanjul, o resursă vitală pentru comerț și călătoriile spațiale. Familia Atreides primește controlul asupra planetei, dar ajunge rapid victima unei conspirații complexe. Tânărul Paul Atreides supraviețuiește trădării și ajunge în mijlocul poporului Fremen, unde începe să fie văzut ca o figură providențială. Romanul combină intriga politică, strategiile de supraviețuire și reflecțiile asupra mediului, credinței și puterii. Pe măsură ce Paul își asumă rolul tot mai mare în istoria planetei, cartea ridică întrebări despre lideri mesianici și costul transformării sociale."
+	},
+	{
+		"title": "Fahrenheit 451",
+		"author": "Ray Bradbury",
+		"themes": ["cenzură", "cunoaștere", "conformism", "rezistență"],
+		"short_summary": "Într-o lume în care cărțile sunt interzise, un pompier începe să înțeleagă valoarea ideilor pe care trebuia să le distrugă.",
+		"full_summary": "Guy Montag este pompier într-o societate viitoare în care rolul pompierilor nu este să stingă incendii, ci să ardă cărțile interzise de autorități. Viața lui se schimbă atunci când întâlnește o tânără care îl face să privească lumea cu mai multă curiozitate și sinceritate. Treptat, Montag începe să se îndoiască de sistemul care promovează divertismentul superficial și descurajează gândirea critică. Pe măsură ce descoperă puterea lecturii și a memoriei culturale, el intră într-un proces de revoltă interioară. Romanul examinează efectele cenzurii, alienarea socială și responsabilitatea de a păstra ideile vii."
+	},
+	{
+		"title": "The Little Prince",
+		"author": "Antoine de Saint-Exupéry",
+		"themes": ["inocență", "prietenie", "iubire", "sensul vieții"],
+		"short_summary": "Un pilot întâlnește un mic prinț venit de pe o altă planetă, iar dialogul lor devine o meditație asupra vieții și relațiilor umane.",
+		"full_summary": "Povestea este relatată de un pilot care se prăbușește în deșert și întâlnește un băiețel misterios, Micul Prinț. Acesta îi povestește despre planeta sa mică, despre floarea pe care o iubește și despre călătoriile sale pe alte asteroizi, unde a întâlnit adulți preocupați de putere, vanitate sau acumulare. Prin observațiile simple, dar profunde ale copilului, romanul pune sub semnul întrebării valorile lumii adulte. Relația dintre pilot și Micul Prinț devine centrul emoțional al cărții și oferă o reflecție tandră despre afecțiune, responsabilitate și ceea ce este cu adevărat esențial."
+	},
+	{
+		"title": "The Book Thief",
+		"author": "Markus Zusak",
+		"themes": ["război", "moarte", "cuvinte", "umanitate"],
+		"short_summary": "În Germania nazistă, o fată găsește refugiu în puterea cuvintelor și în legăturile umane create în mijlocul violenței.",
+		"full_summary": "Romanul este narat de Moarte și urmărește viața lui Liesel Meminger, o fată trimisă într-o familie adoptivă în timpul celui de-Al Doilea Război Mondial. Într-un context marcat de frică, propagandă și lipsuri, Liesel descoperă cărțile și începe să fure volume care devin pentru ea surse de sens și rezistență. Relația ei cu părinții adoptivi, cu prietenii din cartier și cu un evreu ascuns în pivniță oferă o imagine intimă a vieții cotidiene sub dictatură. Cartea explorează felul în care cuvintele pot răni, dar și vindeca, și arată cum fragmentele de bunătate pot supraviețui chiar și în cele mai întunecate vremuri."
+	},
+	{
+		"title": "Pride and Prejudice",
+		"author": "Jane Austen",
+		"themes": ["dragoste", "clasă socială", "orgoliu", "judecată"],
+		"short_summary": "Elizabeth Bennet și domnul Darcy trebuie să își depășească prejudecățile pentru a înțelege adevărata natură a celuilalt.",
+		"full_summary": "Romanul urmărește familia Bennet, în special pe Elizabeth, o tânără inteligentă și independentă care navighează convențiile sociale ale Angliei rurale. Când îl întâlnește pe domnul Darcy, ea îl consideră arogant și rece, în timp ce el o vede inițial prin filtrul propriului orgoliu. Pe parcursul mai multor întâlniri, neînțelegeri și revelații, amândoi sunt forțați să își reevalueze impresiile. Povestea este atât o istorie de dragoste, cât și o critică fină a presiunilor legate de statut, căsătorie și reputație. Jane Austen construiește un roman despre maturizare morală, luciditate și capacitatea de a judeca mai drept oamenii din jur."
+	},
+	{
+		"title": "The Alchemist",
+		"author": "Paulo Coelho",
+		"themes": ["destin", "căutare interioară", "vis", "transformare"],
+		"short_summary": "Un păstor pornește în căutarea unei comori și descoperă, în schimb, lecții despre sensul propriei vieți.",
+		"full_summary": "Santiago, un tânăr păstor din Andaluzia, visează în mod repetat la o comoară ascunsă lângă piramidele din Egipt. Convins să își urmeze visul, el renunță la viața cunoscută și pornește într-o călătorie presărată cu obstacole, întâlniri simbolice și încercări. Pe drum, învață să interpreteze semnele lumii, să își asculte inima și să înțeleagă că adevărata comoară nu este doar materială. Romanul are o structură alegorică și transmite ideea că fiecare om are o menire personală, iar curajul de a o urma este o formă de împlinire."
+	},
+	{
+		"title": "To Kill a Mockingbird",
+		"author": "Harper Lee",
+		"themes": ["justiție", "rasism", "copilărie", "empatie"],
+		"short_summary": "Prin ochii unei fete, romanul surprinde tensiunile morale și rasiale ale Sudului american interbelic.",
+		"full_summary": "Povestea este narată de Scout Finch, o fetiță care crește într-un orășel din Alabama, unde regulile sociale și prejudecățile rasiale influențează profund viața comunității. Tatăl ei, avocatul Atticus Finch, acceptă să apere un bărbat de culoare acuzat pe nedrept, iar acest proces devine centrul moral al romanului. În paralel, copilăria lui Scout și a fratelui ei este marcată de curiozitate, joc și confruntarea treptată cu nedreptatea lumii adulte. Cartea vorbește despre curaj moral, compasiune și necesitatea de a privi oamenii dincolo de stereotipuri."
+	},
+	{
+		"title": "The Lord of the Rings",
+		"author": "J.R.R. Tolkien",
+		"themes": ["bine contra rău", "sacrificiu", "prietenie", "putere"],
+		"short_summary": "O comunitate improbabilă pornește să distrugă un inel malefic, într-o luptă epică pentru salvarea Pământului de Mijloc.",
+		"full_summary": "Trilogia urmărește călătoria lui Frodo Baggins, un hobbit care moștenește Inelul Unic, un obiect cu o putere corupătoare enormă. Pentru a împiedica întoarcerea forțelor întunericului conduse de Sauron, Frodo și aliații săi trebuie să ducă inelul în inima teritoriului inamic și să îl distrugă. De-a lungul drumului, prietenia, loialitatea și sacrificiul sunt puse la încercare în fața războiului și a tentației puterii. Lumea creată de Tolkien este vastă și bogată în mitologie, iar povestea combină aventura epică cu o reflecție asupra fragilității binelui și a responsabilității individuale."
+	},
+	{
+		"title": "Harry Potter and the Philosopher's Stone",
+		"author": "J.K. Rowling",
+		"themes": ["magie", "prietenie", "identitate", "curaj"],
+		"short_summary": "Harry descoperă că este vrăjitor și intră într-o lume nouă, unde prietenia și curajul îi vor defini primul an la Hogwarts.",
+		"full_summary": "Harry Potter, un băiat orfan crescut într-un mediu ostil, află la unsprezece ani că aparține lumii vrăjitorilor. Invitat la Școala Hogwarts, el descoperă un univers plin de magie, reguli noi și mistere vechi. Acolo leagă prietenii importante și începe să afle adevărul despre trecutul său și despre părinții lui. În centrul poveștii se află și un secret legat de Piatra Filozofală, care atrage forțe periculoase. Romanul combină farmecul descoperirii cu tema formării identității și a alegerilor morale făcute încă din copilărie."
+	},
+	{
+		"title": "All Quiet on the Western Front",
+		"author": "Erich Maria Remarque",
+		"themes": ["război", "traumă", "dezumanizare", "pierdere"],
+		"short_summary": "Experiența brutală a frontului distruge idealismul unei generații tinere trimise să lupte în Primul Război Mondial.",
+		"full_summary": "Romanul îl are în centru pe Paul Bäumer, un tânăr soldat german care ajunge pe front împreună cu colegii săi de școală, convinși inițial de discursuri patriotice. Realitatea războiului se dovedește însă o succesiune de teroare, foamete, pierderi și degradare fizică și psihică. Paul observă cum viața de tranșee rupe legăturile cu trecutul și golește de sens idealurile cu care generația lui a fost crescută. Cartea oferă o perspectivă profund umană asupra traumei, absurdului războiului și incapacității supraviețuitorilor de a se întoarce cu adevărat la normalitate."
+	}
+]
