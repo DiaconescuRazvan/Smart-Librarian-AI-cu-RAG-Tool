@@ -10,18 +10,51 @@ env/
 
 # Environment variables
 .env
+.env.*
+!.env.example
+*.local
+
+# Secrets and private credentials
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+credentials.json
+secrets.json
+secrets.*
 
 # ChromaDB local database
 chroma_db/
+**/chroma_db/
+backend/conversations.json
 
 # Generated images
 generated_images/
 
 # Generated audio
 generated_audio/
+**/generated_audio/
+
+# Generated media and local runtime files
+*.mp3
+*.wav
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.sqlite3
+*.db
 
 # VS Code
 .vscode/
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/
+node_modules/
+dist/
 
 # macOS
 .DS_Store
@@ -38,5 +71,4 @@ Thumbs.db
 
 # Distribution files
 build/
-dist/
 *.egg-info/

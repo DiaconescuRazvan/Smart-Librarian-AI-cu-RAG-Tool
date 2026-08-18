@@ -16,7 +16,11 @@ După recomandarea unei cărți, chatbotul utilizează **Function Calling** pent
 - Filtru pentru limbaj nepotrivit
 - Generare imagine pentru cartea recomandată
 - Generare fișier audio (Text-to-Speech)
-- Interfață CLI
+- Conversații continue cu istoric salvat local
+- Tab pentru vizualizarea conversațiilor anterioare
+- Trimiterea mesajelor cu tasta Enter
+- Răspunsuri limitate la subiecte despre cărți
+- Interfață web React + API FastAPI
 
 ---
 
@@ -29,6 +33,8 @@ După recomandarea unei cărți, chatbotul utilizează **Function Calling** pent
 - OpenAI Text-to-Speech
 - ChromaDB
 - python-dotenv
+- FastAPI și Uvicorn
+- React și Vite
 
 ---
 
@@ -37,20 +43,26 @@ După recomandarea unei cărți, chatbotul utilizează **Function Calling** pent
 ```
 smart-librarian/
 │
-├── chroma_db/
-├── data/
-│   └── book_summaries.json
-│
-├── generated_images/
-├── generated_audio/
-│
-├── app.py
-├── books.py
-├── vector_store.py
-│
-├── .env
-├── .env.example
-├── requirements.txt
+├── backend/
+│   ├── app/
+│   │   ├── main.py
+│   │   ├── librarian.py
+│   │   ├── books.py
+│   │   ├── models.py
+│   │   └── vector_store.py
+│   ├── data/book_summaries.json
+│   ├── chroma_db/
+│   ├── generated_images/
+│   ├── generated_audio/
+│   ├── conversations.json          # creat automat, ignorat de Git
+│   ├── .env.example
+│   └── requirements.txt
+├── frontend/
+│   ├── src/
+│   ├── package.json
+│   └── vite.config.js
+├── start.bat                        # pornește aplicația cu un singur click
+├── start-hidden.vbs                 # pornește serviciile fără ferestre PowerShell
 └── README.md
 ```
 
@@ -88,14 +100,17 @@ Activează-l
 ## 3. Instalează dependențele
 
 ```powershell
-py -m pip install -r requirements.txt
+py -m pip install -r backend\requirements.txt
+
+cd frontend
+npm install
 ```
 
 ---
 
 ## 4. Configurează OpenAI API Key
 
-Creează fișierul
+În folderul `backend`, creează fișierul
 
 ```
 .env
@@ -109,13 +124,44 @@ OPENAI_CHAT_MODEL=gpt-4.1-mini
 OPENAI_EMBEDDING_MODEL=text-embedding-3-small
 ```
 
+Nu salva cheia reală în Git și nu o introduce în fișiere urmărite de Git. Fișierul
+`backend/.env` este ignorat prin `.gitignore`, iar `backend/.env.example` conține
+doar valori demonstrative.
+
 ---
 
 # Rularea aplicației
 
+### Varianta recomandată: un singur click
+
+Din rădăcina proiectului, rulează:
+
 ```powershell
-py app.py
+.\start.bat
 ```
+
+Poți face și dublu-click pe `start.bat`. Scriptul pornește backendul,
+frontendul și deschide automat `http://localhost:5173`.
+
+### Varianta manuală
+
+Într-un terminal pornește backendul:
+
+```powershell
+cd backend
+py -3 -m uvicorn app.main:app --reload --port 8000
+```
+
+Într-un al doilea terminal pornește frontendul:
+
+```powershell
+cd frontend
+npm run dev
+```
+
+Deschide `http://localhost:5173` în browser. API-ul este disponibil la
+`http://localhost:8000`, iar documentația interactivă FastAPI la
+`http://localhost:8000/docs`.
 
 La prima rulare aplicația:
 
@@ -163,6 +209,8 @@ Vreau o carte despre război.
 7. Tool-ul returnează rezumatul complet.
 8. Utilizatorul poate genera opțional o imagine reprezentativă pentru carte.
 9. Utilizatorul poate genera opțional o versiune audio a recomandării și rezumatului.
+10. Întrebările și răspunsurile sunt salvate în conversația curentă.
+11. Istoricul poate fi încărcat din tabul `Conversații`.
 
 ---
 
@@ -223,7 +271,7 @@ Aplicația trimite către OpenAI un prompt bazat pe titlul cărții și genereaz
 Imaginea este salvată local în folderul:
 
 ```
-generated_images/
+backend/generated_images/
 ```
 
 ---
@@ -235,7 +283,7 @@ După afișarea recomandării și a rezumatului, utilizatorul poate genera și o
 Aplicația utilizează modelul OpenAI Text-to-Speech pentru a transforma textul în vorbire și salvează rezultatul în format MP3 în folderul:
 
 ```
-generated_audio/
+backend/generated_audio/
 ```
 
 Acest fișier poate fi redat ulterior în orice player audio.
@@ -255,6 +303,24 @@ Astfel se evită consumul inutil de tokeni și se asigură o interacțiune civil
 
 ---
 
+# Conversații și confidențialitate
+
+Fiecare conversație primește un identificator propriu. La următoarea întrebare,
+istoricul recent este transmis modelului pentru a păstra contextul dialogului.
+Conversațiile sunt salvate local în `backend/conversations.json` și sunt ignorate
+de Git. Fișierul poate conține mesaje private și nu trebuie urcat pe GitHub.
+
+În interfață:
+
+- mesajele utilizatorului și ale librarianului sunt afișate ca într-un chat normal;
+- `Enter` trimite întrebarea;
+- `Shift + Enter` introduce o linie nouă;
+- bara de scriere se golește după trimitere;
+- răspunsul nou derulează automat conversația până la ultimul mesaj;
+- tabul `Conversații` permite încărcarea dialogurilor salvate.
+
+---
+
 # Cerințe implementate
 
 ## Obligatorii
@@ -266,7 +332,8 @@ Astfel se evită consumul inutil de tokeni și se asigură o interacțiune civil
 - ✔ OpenAI GPT
 - ✔ Function Calling
 - ✔ Tool `get_summary_by_title()`
-- ✔ Chat CLI
+- ✔ API REST FastAPI
+- ✔ Interfață web React
 
 ## Opționale
 
