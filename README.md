@@ -20,6 +20,7 @@ După recomandarea unei cărți, chatbotul utilizează **Function Calling** pent
 - Tab pentru vizualizarea conversațiilor anterioare
 - Trimiterea mesajelor cu tasta Enter
 - Răspunsuri limitate la subiecte despre cărți
+- Recomandări pornind de la teme scurte precum `război` sau `dragoste`
 - Interfață web React + API FastAPI
 
 ---
@@ -316,6 +317,7 @@ de Git. Fișierul poate conține mesaje private și nu trebuie urcat pe GitHub.
 - `Enter` trimite întrebarea;
 - `Shift + Enter` introduce o linie nouă;
 - bara de scriere se golește după trimitere;
+- mesajele de eroare sau refuz apar sub bara de scriere;
 - răspunsul nou derulează automat conversația până la ultimul mesaj;
 - tabul `Conversații` permite încărcarea dialogurilor salvate.
 

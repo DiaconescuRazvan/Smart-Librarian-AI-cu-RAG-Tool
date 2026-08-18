@@ -7,7 +7,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 from openai import OpenAI
 
-from .books import get_summary_by_title
+from .books import get_summary_by_title, load_books
 from .vector_store import initialize_vector_store, search_books
 
 
@@ -39,6 +39,26 @@ def contains_bad_language(text: str) -> bool:
     return any(word in BAD_WORDS for word in normalize_text(text).split())
 
 
+def is_short_book_topic(user_question: str) -> bool:
+    words = normalize_text(user_question).split()
+    if len(words) != 1:
+        return False
+
+    topic = words[0]
+    for book in load_books():
+        searchable_text = " ".join(
+            [
+                str(book.get("title", "")),
+                str(book.get("author", "")),
+                " ".join(str(theme) for theme in book.get("themes", [])),
+            ]
+        )
+        if topic in normalize_text(searchable_text).split():
+            return True
+
+    return False
+
+
 def _build_history_context(history: list[dict]) -> str:
     if not history:
         return "Nu există mesaje anterioare."
@@ -50,6 +70,9 @@ def _build_history_context(history: list[dict]) -> str:
 
 
 def is_book_related(client: OpenAI, user_question: str, history: list[dict]) -> bool:
+    if is_short_book_topic(user_question):
+        return True
+
     response = client.chat.completions.create(
         model=OPENAI_CHAT_MODEL,
         messages=[
@@ -57,6 +80,8 @@ def is_book_related(client: OpenAI, user_question: str, history: list[dict]) -> 
                 "role": "system",
                 "content": (
                     "Clasifică întrebarea ca permisă numai dacă este exclusiv despre cărți. "
+                    "Un singur cuvânt care este o temă literară din colecție, precum război, "
+                    "dragoste, magie sau libertate, este o cerere validă de recomandare. "
                     "Dacă include orice subiect din afara cărților, răspunde cu false. "
                     "Răspunde numai cu JSON valid: {\"book_related\": true} sau "
                     "{\"book_related\": false}. Sunt permise recomandări, rezumate, "

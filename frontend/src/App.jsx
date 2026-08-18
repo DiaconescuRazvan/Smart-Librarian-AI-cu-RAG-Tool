@@ -264,10 +264,6 @@ function App() {
         </section>
       )}
 
-      {error && <div className="error-message" role="alert">{error}</div>}
-
-      {loading && <div className="loading-line"><span /> Analizez preferințele și caut în colecție...</div>}
-
       {result && (
         <section className="result-grid" aria-live="polite">
           <article className="recommendation-card">
@@ -316,6 +312,9 @@ function App() {
           loading={loading}
         />
       )}
+
+      {loading && <div className="loading-line"><span /> Analizez preferințele și caut în colecție...</div>}
+      {error && <div className="error-message" role="alert">{error}</div>}
 
       <footer><span>SMART LIBRARIAN</span><span>Doar despre cărți. Mereu curios.</span></footer>
     </main>
